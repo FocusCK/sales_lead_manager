@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Lead Details{% endblock %}
+
+{% block content %}
+<h1>{{ lead.name }}</h1>
+<p>Contact Info: {{ lead.contact_info }}</p>
+<p>Status: {{ lead.status }}</p>
+
+<h2>Interactions</h2>
+<ul>
+    {% for interaction in lead.interactions %}
+    <li>{{ interaction.date }} - {{ interaction.interaction_type }}: {{ interaction.notes }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Tasks</h2>
+<ul>
+    {% for task in lead.tasks %}
+    <li>{{ task.task_name }} - Due: {{ task.due_date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
