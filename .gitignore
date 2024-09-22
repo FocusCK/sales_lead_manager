@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+bin/
+lib/
+Include/
+Scripts/
+*.egg-info/
+*.egg
+
+# MacOS
+.DS_Store
+
+# Secret Keys
+config.py
